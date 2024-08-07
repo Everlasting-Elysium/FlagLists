@@ -18,16 +18,16 @@ class NewVisitorTest(unittest.TestCase):
         header_text = self.browser.find_element(By.TAG_NAME, 'h1').text
         self.assertIn('To-Do', header_text)
         ## 输入一个代办事项
-        inputBox = self.browser.find_element(By.TAG_NAME, 'id_new_item')
+        inputBox = self.browser.find_element(By.ID, 'id_new_item')
         self.assertEqual(
-            inputBox.get_attrbute('placeholder'),
-            'Enter a to-do tiem'
+            inputBox.get_attribute('placeholder'),
+            'Enter a to-do item'
         )
         ### 在文本框中输入代办
         inputBox.send_keys('Buy car')
         ### 回车保存输入，并刷新页面，且表格中出现了刚才填写的代办
         inputBox.send_keys(Keys.ENTER)
-        table = self.browser.find_element(By.TAG_NAME, 'id_list_table')
+        table = self.browser.find_element(By.ID, 'id_list_table')
         rows = table.find_element(By.TAG_NAME,'tr')
         self.assertTrue(
             any(row.text == '1: Buy car' for row in rows)
