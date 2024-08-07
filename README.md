@@ -15,5 +15,5 @@ python3 manage.py runserver
 ```
 + 启动测试
 ```shell
-python3 functional_tests.py
+python3 manage.py test lists
 ```
