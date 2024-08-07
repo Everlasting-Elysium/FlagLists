@@ -13,7 +13,11 @@ python3 manage.py startapp lists
 ```shell
 python3 manage.py runserver
 ```
-+ 启动测试
++ 启动单元测试
 ```shell
 python3 manage.py test lists
+```
++ 启动功能测试
+```shell
+python3 functional_tests.py
 ```
