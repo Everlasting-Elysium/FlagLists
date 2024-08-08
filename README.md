@@ -21,3 +21,7 @@ python3 manage.py test lists
 ```shell
 python3 functional_tests.py
 ```
++ 迁移数据库
+```shell
+python3 manage.py makemigrations
+```
