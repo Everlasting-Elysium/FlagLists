@@ -25,3 +25,8 @@ python3 functional_tests.py
 ```shell
 python3 manage.py makemigrations
 ```
+
++ 迁移
+```shell
+python3 manage.py migrate
+```
